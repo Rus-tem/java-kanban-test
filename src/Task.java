@@ -4,20 +4,11 @@ public class Task {
     private String description;
     private String status;
 
-    public Task( String name, String description) {
+    public Task(String name, String description) {
         this.name = name;
         this.description = description;
 
     }
-
-    @Override // переопределяем toString
-    public String toString() {
-    String result = "Номер задачи/подзадачи/эпика: " + id +
-            ", Название задачи: " + name +
-            ", Описание задачи: " + description +
-            ", Стату задачи : " + status  ;
-    return  result;
-}
 
     public int getId() {
         return id;
@@ -51,4 +42,11 @@ public class Task {
         this.status = status;
     }
 
+    @Override // переопределяем toString
+    public String toString() {
+        return "Номер : " + id +
+                ", Название : " + name +
+                ", Описание : " + description +
+                ", Стату : " + status;
+    }
 }
